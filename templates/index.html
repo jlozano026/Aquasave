@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}AQUASAVE | Inicio{% endblock %}
+{% block content %}
+<section class="hero">
+    <p class="status {{ 'is-open' if open_now else 'is-closed' }}"><span class="dot" aria-hidden="true"></span>{{ open_text }}</p>
+    <h1>¿Qué vamos<br>a hacer hoy?</h1>
+    <p class="hero-sub">Elige tu carril: registra tu ingreso o apúntate a una clase.</p>
+
+    <div class="swim-lane" aria-hidden="true">
+        <svg class="swimmer" viewBox="0 0 170 60" width="170" height="60">
+            <ellipse cx="80" cy="50" rx="70" ry="6" fill="#fff" opacity=".45"/>
+            <path d="M6 38 Q40 24 84 32 Q112 38 128 40" stroke="#ffcfa6" stroke-width="15" stroke-linecap="round" fill="none"/>
+            <circle cx="138" cy="36" r="13" fill="#ffcfa6"/>
+            <path d="M124 31 Q138 18 152 33 Q142 28 124 31Z" fill="#ff5a4e"/>
+            <path d="M104 33 Q96 -2 62 -6" stroke="#ffcfa6" stroke-width="10" stroke-linecap="round" fill="none"><animate attributeName="d" dur=".9s" repeatCount="indefinite" values="M104 33 Q96 -2 62 -6;M104 33 Q112 6 134 -2;M104 33 Q96 -2 62 -6"/></path>
+            <path d="M6 38 l-14 -8 M6 38 l-16 7" stroke="#ffcfa6" stroke-width="8" stroke-linecap="round"><animate attributeName="d" dur=".35s" repeatCount="indefinite" values="M6 38 l-14 -8 M6 38 l-16 7;M6 38 l-14 -2 M6 38 l-16 13;M6 38 l-14 -8 M6 38 l-16 7"/></path>
+        </svg>
+        <div class="rope"></div>
+    </div>
+</section>
+
+<section class="lanes">
+    <a class="lane-card" href="{{ url_for('ingreso') }}">
+        <div class="lane-img"><img src="{{ url_for('static', filename='img/ingreso.svg') }}" alt="Piscina con carriles y un nadador"></div>
+        <div class="lane-body">
+            <h2>Registro de ingreso</h2>
+            <p>Anota tus datos antes de entrar a la piscina. La fecha y la hora se guardan solas.</p>
+            <span class="btn">Registrarme</span>
+        </div>
+    </a>
+    <div class="lane-rope" aria-hidden="true"></div>
+    <a class="lane-card" href="{{ url_for('clases') }}">
+        <div class="lane-img"><img src="{{ url_for('static', filename='img/clases.svg') }}" alt="Nadador y aro salvavidas en el agua"></div>
+        <div class="lane-body">
+            <h2>Nuestras clases</h2>
+            <p>Natación, aquagimnasia y zumba. Mira los horarios y reserva tu lugar.</p>
+            <span class="btn">Ver clases</span>
+        </div>
+    </a>
+</section>
+{% endblock %}

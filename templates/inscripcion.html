@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Inscripción | AQUASAVE{% endblock %}
+{% block content %}
+<section class="page-heading" style="--c: {{ selected_class.color or '#1fb5d4' }}">
+    <a class="back" href="{{ url_for('clases') }}">← Volver a nuestras clases</a>
+    <h1>Inscripción a {{ selected_class.name }}</h1>
+    <p class="today-box">{{ selected_class.icon }} {{ selected_class.day }}, {{ selected_class.time }}</p>
+</section>
+<form class="panel" method="post" onsubmit="this.querySelector('button[type=submit]').disabled = true">
+    <input type="hidden" name="_csrf" value="{{ csrf_token() }}">
+    {% include "_datos.html" %}
+    <p class="hint">Usamos tus datos solo para gestionar la inscripción.</p>
+    <button class="button" type="submit">Enviar inscripción</button>
+</form>
+{% endblock %}

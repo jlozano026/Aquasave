@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Registro de ingreso | AQUASAVE{% endblock %}
+{% block content %}
+<section class="page-heading">
+    <a class="back" href="{{ url_for('home') }}">← Volver al inicio</a>
+    <h1>Registro de ingreso</h1>
+    <p>Completa tus datos para ingresar a la piscina.</p>
+    <div class="today-box">Fecha de ingreso: <strong>{{ today_label }}</strong></div>
+</section>
+
+<form class="panel" method="post" action="{{ url_for('ingreso') }}" onsubmit="this.querySelector('button[type=submit]').disabled = true">
+    <input type="hidden" name="_csrf" value="{{ csrf_token() }}">
+    {% include "_datos.html" %}
+    <p class="hint">Usamos tus datos solo para controlar el ingreso.</p>
+    <button class="button" type="submit">Registrar ingreso</button>
+</form>
+
+<section class="panel schedule-box">
+    <h2>Horarios de atención</h2>
+    <ul>
+        {% for label, hours in schedule %}
+        <li><strong>{{ label }}:</strong> {{ hours }}</li>
+        {% endfor %}
+    </ul>
+</section>
+{% endblock %}

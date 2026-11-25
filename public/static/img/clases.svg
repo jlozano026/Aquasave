@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" preserveAspectRatio="xMidYMid slice">
+<defs>
+<linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b8fb0"/><stop offset="1" stop-color="#143f66"/></linearGradient>
+</defs>
+<rect width="600" height="320" fill="url(#b)"/>
+<g fill="#fff" opacity=".07"><circle cx="90" cy="60" r="90"/><circle cx="540" cy="260" r="120"/></g>
+<g stroke="#fff" stroke-opacity=".18" stroke-width="2" fill="none">
+<path d="M-100 90 q25 -10 50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0"><animateTransform attributeName="transform" type="translate" values="0 0;100 0" dur="3.2s" repeatCount="indefinite"/></path>
+<path d="M-100 150 q25 -10 50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0"><animateTransform attributeName="transform" type="translate" values="0 0;100 0" dur="3.2s" repeatCount="indefinite"/></path>
+<path d="M-100 210 q25 -10 50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0"><animateTransform attributeName="transform" type="translate" values="0 0;100 0" dur="3.2s" repeatCount="indefinite"/></path>
+</g>
+<!-- aro salvavidas -->
+<g transform="translate(120 160)">
+<circle r="58" fill="#ff5d73"/><circle r="22" fill="#143f66"/>
+<g fill="#fff"><path d="M-4 -58 h8 v36 h-8z"/><path d="M-4 22 h8 v36 h-8z"/><path d="M-58 -4 v8 h36 v-8z"/><path d="M22 -4 v8 h36 v-8z"/></g>
+</g>
+<!-- nadadores / gotas -->
+<g transform="translate(330 170)"><animateTransform attributeName="transform" type="translate" values="330 170;330 162;330 170" dur="2.8s" repeatCount="indefinite"/>
+<path d="M-90 20 Q-40 -10 20 6 Q60 16 90 4" stroke="#ffcfa6" stroke-width="15" stroke-linecap="round" fill="none"/>
+<circle cx="100" cy="-2" r="14" fill="#ffcfa6"/>
+<path d="M85 -8 Q100 -22 115 -6 Q104 -10 85 -8Z" fill="#ffd13d"/>
+<path d="M50 4 Q40 -46 0 -56" stroke="#ffcfa6" stroke-width="10" stroke-linecap="round" fill="none"/>
+<ellipse cx="0" cy="34" rx="110" ry="10" fill="#fff" opacity=".25"/>
+</g>
+<g transform="translate(470 80)" fill="#ffd13d"><circle r="7"/><circle cx="26" cy="22" r="4"/></g>
+<g fill="#fff" opacity=".8"><circle cx="230" cy="250" r="6"/><circle cx="248" cy="232" r="4"/><circle cx="214" cy="228" r="3"/><circle cx="470" cy="250" r="5"/><circle cx="486" cy="236" r="3"/></g>
+<!-- tabla -->
+<g transform="rotate(-18 500 255)"><rect x="440" y="244" width="120" height="26" rx="13" fill="#ffd13d"/><rect x="452" y="252" width="96" height="6" rx="3" fill="#fff" opacity=".6"/></g>
+</svg>

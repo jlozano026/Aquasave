@@ -1,0 +1,25 @@
+<label for="nombre">Nombre completo</label>
+<input id="nombre" name="nombre" maxlength="80" autocomplete="name" value="{{ form.nombre }}" required>
+
+<label for="edad">Edad</label>
+<input id="edad" name="edad" type="number" min="1" max="109" inputmode="numeric" value="{{ form.edad }}" required>
+
+<label for="apartamento">Apartamento</label>
+<input id="apartamento" name="apartamento" maxlength="20" placeholder="Ej. Torre 2 - 503" value="{{ form.apartamento }}" required>
+<p class="hint">Si eres invitado, escribe el apartamento que visitas.</p>
+
+<label for="rh">RH (tipo de sangre)</label>
+<select id="rh" name="rh" required>
+    <option value="">Selecciona tu RH</option>
+    {% for t in blood_types %}
+    <option value="{{ t }}" {% if form.rh == t %}selected{% endif %}>{{ t }}</option>
+    {% endfor %}
+</select>
+
+<fieldset class="choices-box">
+    <legend>¿Eres residente o invitado?</legend>
+    <div class="choices">
+        <label class="choice"><input type="radio" name="tipo" value="residente" {% if form.tipo == 'residente' %}checked{% endif %} required><span class="choice-emoji" aria-hidden="true">🏠</span> Residente</label>
+        <label class="choice"><input type="radio" name="tipo" value="invitado" {% if form.tipo == 'invitado' %}checked{% endif %} required><span class="choice-emoji" aria-hidden="true">🎟️</span> Invitado</label>
+    </div>
+</fieldset>
